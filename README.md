@@ -10,8 +10,6 @@ The following tasks were performed on the data using poreplex program:
 2. Basecalling on-fly using Albacore 2.3.0.
 3. Aligning basecalled reads to Neurospora crassa reference genome (the genome must be indexed using "minimap2")
 
-Data was trimmed for 3 prime adapaters, basecalled on-fly with Albacore 2.3.0 and aligned against the Neurospora crassa reference genome using poreplex program:
-
 ```bash
 screen -a
 # gridiION 08-10-2018
