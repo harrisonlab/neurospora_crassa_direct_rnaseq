@@ -1,13 +1,23 @@
-# neurospora_crassa_direct_rnaseq
-Direct RNA-Seq data analysis of Neurospora crassa.
+# Neurospora crassa direct RNA-Seq data analysis
+================================================
 
-This file presents about running poreplex on direct RNA sequencing data to perform:
-1. Trimming 3` adapters
-2. Basecalling using Albacore 2.3.0
-3. Aligning basecalled reads to reference genome indexed using "minimap2" program
+Scripts used for the analysis of Fusarium venenatum genomes
+Note - all this work was performed in the directory:
+/home/groups/harrisonlab/project_files/neurospora_crassa
 
+The following tasks were performed on the data using poreplex program:
+1. Trimming 3 prime adapters.
+2. Basecalling on-fly using Albacore 2.3.0.
+3. Aligning basecalled reads to Neurospora crassa reference genome (the genome must be indexed using "minimap2")
+
+Data was trimmed for 3 prime adapaters, basecalled on-fly with Albacore 2.3.0 and aligned against the Neurospora crassa reference genome using poreplex program:
+
+```bash
+screen -a
+# gridiION 08-10-2018
 inputDir=/data/seq_data/minion/2018/LP10-7-1a/GA10000/reads
-outDir=/home/groups/harrisonlab/project_files/neurospora_crassa/poreplex_output_LP10-7-1a
+run=$(echo $inputDir | cut -f6 -d '/')
+outDir=/home/groups/harrisonlab/project_files/neurospora_crassa/poreplex_output_"$run"
 genomeIndex=/home/bonthas/projects/neurospora_crassa_direct_rnaseq/minimap2
 
 poreplex -i $inputDir \
@@ -18,5 +28,7 @@ poreplex -i $inputDir \
          --fastq \
 	 --parallel 10 \
 	 --align $genomeIndex/*mmidx
-        
+	 
 
+```
+The poreplex generates fastq and bam files in $outDir.
