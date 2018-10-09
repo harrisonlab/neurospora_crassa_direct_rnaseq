@@ -1,7 +1,7 @@
 # Neurospora crassa direct RNA-Seq data analysis
 ================================================
 
-Scripts used for the analysis of Fusarium venenatum genomes
+Scripts used for the direct RNA-Seq data analysis of Neurospora crassa
 Note - all this work was performed in the directory:
 /home/groups/harrisonlab/project_files/neurospora_crassa
 
