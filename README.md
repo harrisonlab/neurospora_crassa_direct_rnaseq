@@ -5,7 +5,9 @@ Scripts used for the direct RNA-Seq data analysis of Neurospora crassa.
 Note - all this work was performed in the directory:
 /home/groups/harrisonlab/project_files/neurospora_crassa
 
-# Data was basecalled again using Albacore 2.3.3 & trimmed 3 prime adapters on the minion server
+# Processing the read data
+
+Data was basecalled again using Albacore 2.3.3 & trimmed 3 prime adapters on the minion server
 
 ```bash
 # Date=11-10-18
