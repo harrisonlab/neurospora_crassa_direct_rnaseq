@@ -221,6 +221,11 @@ scp *.gz  bonthas@192.168.1.200:$OutDir/.
 # Step 2: Mapping filtered reads against Neurospora crassa reference genome using GMAP
 
 For complete parameters used in mapping by GMAP were presented in files/sub_gmap.sh
+
+mkdir Gmap
+
+The output of GMAP will be stored in Gmap directory.
+
 ```bash
 qsub scripts/sub_gmap.sh filtered_reads/minion/N.crassa/LP10-7-1a/LP10-7-1a.fastq
 qsub scripts/sub_gmap.sh filtered_reads/minion/N.crassa/LP10-8-1/LP10-8-1.fastq
