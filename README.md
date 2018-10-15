@@ -5,7 +5,7 @@ Scripts used for the direct RNA-Seq data analysis of Neurospora crassa.
 Note - all this work was performed in the directory:
 /home/groups/harrisonlab/project_files/neurospora_crassa
 
-# Step 1: Data was basecalled again using Albacore 2.3.3 & trimmed 3 prime adapters on the minion server
+# Data was basecalled again using Albacore 2.3.3 & trimmed 3 prime adapters on the minion server
 
 ```bash
 # Date=11-10-18
@@ -218,7 +218,7 @@ tar -cz -f "$Organism"_"$Run".tar.gz "$Organism"_"$Run"
 scp *.gz  bonthas@192.168.1.200:$OutDir/.
 ```
 
-# Step 2: Mapping filtered reads against Neurospora crassa reference genome using GMAP
+# Mapping filtered reads against Neurospora crassa reference genome using GMAP
 
 For complete parameters used in mapping by GMAP were presented in files/sub_gmap.sh
 
