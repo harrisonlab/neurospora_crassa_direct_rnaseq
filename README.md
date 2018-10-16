@@ -220,7 +220,9 @@ tar -cz -f "$Organism"_"$Run".tar.gz "$Organism"_"$Run"
 scp *.gz  bonthas@192.168.1.200:$OutDir/.
 ```
 
-# Mapping filtered reads against Neurospora crassa reference genome using GMAP
+# Mapping filtered reads against Neurospora crassa reference genome 
+
+Using GMAP:
 
 For complete parameters used in mapping by GMAP were presented in files/sub_gmap.sh
 
@@ -233,4 +235,19 @@ qsub scripts/sub_gmap.sh filtered_reads/minion/N.crassa/LP10-7-1a/LP10-7-1a.fast
 qsub scripts/sub_gmap.sh filtered_reads/minion/N.crassa/LP10-8-1/LP10-8-1.fastq
 qsub scripts/sub_gmap.sh filtered_reads/minion/N.crassa/LP10-7-1a/LP10-11-1b/LP10-11-1b.fastq
 qsub scripts/sub_gmap.sh filtered_reads/minion/N.crassa/LP10-7-1a/LP10-12-1.fastq
+```
+
+Using minimap2
+
+For complete parameters used in mapping by GMAP were presented in files/sub_minimap2.sh
+
+mkdir Minimap2
+
+The output of GMAP will be stored in Minimap2 directory.
+
+```bash
+qsub scripts/sub_minimap2.sh Minimap2 filtered_reads/minion/N.crassa/LP10-7-1a/LP10-7-1a.fastq
+qsub scripts/sub_minimap2.sh Minimap2 filtered_reads/minion/N.crassa/LP10-8-1/LP10-8-1.fastq
+qsub scripts/sub_minimap2.sh Minimap2 filtered_reads/minion/N.crassa/LP10-11-1b/LP10-11-1b.fastq
+qsub scripts/sub_minimap2.sh Minimap2 filtered_reads/minion/N.crassa/LP10-12-1/LP10-12-1.fastq
 ```
