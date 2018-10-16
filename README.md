@@ -239,9 +239,15 @@ qsub scripts/sub_gmap.sh filtered_reads/minion/N.crassa/LP10-7-1a/LP10-12-1.fast
 
 Using minimap2:
 
-For complete parameters used in mapping by GMAP were presented in files/sub_minimap2.sh
+Indexing reference genome file using minimap2:
+
+Prior to mapping reads with Minimap2, the tool will require an indexed reference genome file using minimap2 and it can be done using below command - 
 
 mkdir Minimap2
+
+minimap2 -d minimap2/Neurospora_crassa.NC12.dna_rm.toplevel.mmi Neurospora_crassa.NC12.dna_rm.toplevel.fa
+
+For complete parameters used in mapping by minimap2 were presented in files/sub_minimap2.sh
 
 The output of GMAP will be stored in Minimap2 directory.
 
