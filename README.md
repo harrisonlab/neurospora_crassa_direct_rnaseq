@@ -237,7 +237,7 @@ qsub scripts/sub_gmap.sh filtered_reads/minion/N.crassa/LP10-7-1a/LP10-11-1b/LP1
 qsub scripts/sub_gmap.sh filtered_reads/minion/N.crassa/LP10-7-1a/LP10-12-1.fastq
 ```
 
-Using minimap2
+Using minimap2:
 
 For complete parameters used in mapping by GMAP were presented in files/sub_minimap2.sh
 
