@@ -236,6 +236,29 @@ qsub scripts/sub_gmap.sh filtered_reads/minion/N.crassa/LP10-8-1/LP10-8-1.fastq
 qsub scripts/sub_gmap.sh filtered_reads/minion/N.crassa/LP10-7-1a/LP10-11-1b/LP10-11-1b.fastq
 qsub scripts/sub_gmap.sh filtered_reads/minion/N.crassa/LP10-7-1a/LP10-12-1.fastq
 ```
+# Count mapped reads using featureCounts
+
+mkdir counts
+
+Count mapped reads on Sense strand:
+
+featureCounts -s 1 -a ../Neurospora_crassa.NC12.32.gff3_3 \
+-t gene \
+-o counts/sense.txt \
+LP10-7-1a_gmap_aligned/LP10-7-1a_gmap_aligned.sam \
+LP10-8-1_gmap_aligned/LP10-8-1_gmap_aligned.sam \
+LP10-11-1b_gmap_aligned/LP10-11-1b_gmap_aligned.sam \
+LP10-12-1_gmap_aligned/LP10-12-1_gmap_aligned.sam
+
+Count mapped reads on Anti-sense strand:
+
+featureCounts -s 2 -a ../Neurospora_crassa.NC12.32.gff3_3 \
+-t gene \
+-o counts/anti_sense.txt \
+LP10-7-1a_gmap_aligned/LP10-7-1a_gmap_aligned.sam \
+LP10-8-1_gmap_aligned/LP10-8-1_gmap_aligned.sam \
+LP10-11-1b_gmap_aligned/LP10-11-1b_gmap_aligned.sam \
+LP10-12-1_gmap_aligned/LP10-12-1_gmap_aligned.sam
 
 Using minimap2:
 
