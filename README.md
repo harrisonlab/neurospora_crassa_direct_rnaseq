@@ -237,10 +237,11 @@ qsub scripts/sub_gmap.sh filtered_reads/minion/N.crassa/LP10-7-1a/LP10-11-1b/LP1
 qsub scripts/sub_gmap.sh filtered_reads/minion/N.crassa/LP10-7-1a/LP10-12-1.fastq
 ```
 # Count mapped reads using featureCounts
-
-mkdir counts
+Count reads mapped to specific strand using featureCounts program. The 's' flag extracts count of mapped reads on either of the strand: -s 1 for sense strand and -s 2 for anti sense strand
 
 Count mapped reads on Sense strand:
+```bash
+mkdir counts
 
 featureCounts -s 1 -a ../Neurospora_crassa.NC12.32.gff3_3 \
 -t gene \
@@ -249,9 +250,9 @@ LP10-7-1a_gmap_aligned/LP10-7-1a_gmap_aligned.sam \
 LP10-8-1_gmap_aligned/LP10-8-1_gmap_aligned.sam \
 LP10-11-1b_gmap_aligned/LP10-11-1b_gmap_aligned.sam \
 LP10-12-1_gmap_aligned/LP10-12-1_gmap_aligned.sam
-
+```
 Count mapped reads on Anti-sense strand:
-
+```bash
 featureCounts -s 2 -a ../Neurospora_crassa.NC12.32.gff3_3 \
 -t gene \
 -o counts/anti_sense.txt \
@@ -259,7 +260,7 @@ LP10-7-1a_gmap_aligned/LP10-7-1a_gmap_aligned.sam \
 LP10-8-1_gmap_aligned/LP10-8-1_gmap_aligned.sam \
 LP10-11-1b_gmap_aligned/LP10-11-1b_gmap_aligned.sam \
 LP10-12-1_gmap_aligned/LP10-12-1_gmap_aligned.sam
-
+```
 Using minimap2:
 
 Indexing reference genome file using minimap2:
