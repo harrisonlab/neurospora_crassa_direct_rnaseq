@@ -261,8 +261,6 @@ LP10-8-1_gmap_aligned/LP10-8-1_gmap_aligned.sam \
 LP10-11-1b_gmap_aligned/LP10-11-1b_gmap_aligned.sam \
 LP10-12-1_gmap_aligned/LP10-12-1_gmap_aligned.sam
 ```
-# Perform DEGSeq2 analysis
-Follow the script deseq2.R present in files.
 Using minimap2:
 
 Indexing reference genome file using minimap2:
@@ -283,3 +281,5 @@ qsub scripts/sub_minimap2.sh Minimap2 filtered_reads/minion/N.crassa/LP10-8-1/LP
 qsub scripts/sub_minimap2.sh Minimap2 filtered_reads/minion/N.crassa/LP10-11-1b/LP10-11-1b.fastq
 qsub scripts/sub_minimap2.sh Minimap2 filtered_reads/minion/N.crassa/LP10-12-1/LP10-12-1.fastq
 ```
+# Perform DEGSeq2 analysis
+Follow the script deseq2.R present in files. Differential gene expression analysis was performed on counts data generated from GMAP only.
