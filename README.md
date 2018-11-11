@@ -261,6 +261,8 @@ LP10-8-1_gmap_aligned/LP10-8-1_gmap_aligned.sam \
 LP10-11-1b_gmap_aligned/LP10-11-1b_gmap_aligned.sam \
 LP10-12-1_gmap_aligned/LP10-12-1_gmap_aligned.sam
 ```
+# Perform DEGSeq2 analysis
+Follow the script deseq2.R present in files.
 Using minimap2:
 
 Indexing reference genome file using minimap2:
